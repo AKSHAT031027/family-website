@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️ — Komal</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --pink1: #ffd6e9;
+      --pink2: #ffb3d1;
+      --accent: #8453ff;
+      --text: #3b2b36;
+      --muted: #8b7b85;
+      --header-h: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, var(--pink1), #ffcfe6 40%, #ffd1ea 80%);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    .site {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 25px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--pink2), var(--accent));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      font-size: 28px;
+      color: rgb(98, 5, 5);
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(120, 80, 160, 0.2);
+    }
+
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 15px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      background: white;
+      box-shadow: 0 4px 12px rgba(100, 70, 120, 0.15);
+    }
+
+    .btn.primary {
+      background: linear-gradient(90deg, var(--pink2), var(--accent));
+      color: white;
+    }
+
+    .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(255, 150, 200, 0.35);
+  background: linear-gradient(90deg, #ffd6e9, #ffb3d7);
+}
+
+
+    /* MAIN & PAGES */
+    main {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page {
+      position: absolute;
+      inset: 0;
+      overflow-y: auto;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: 0.3s ease;
+    }
+
+    .page.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(120, 80, 150, 0.12);
+      margin-bottom: 20px;
+    }
+
+    .photo-frame {
+      width: 100%;
+      max-width: 360px;
+      height: 640px;
+      margin: auto;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(120, 80, 150, 0.15);
+      background: white;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(120, 80, 150, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="site">
+
+    <header>
+      <div class="logo">♥</div>
+      <div>
+        <h2 style="margin:0;">For You — Komal</h2>
+        <p style="margin:0; color:var(--muted); font-size:13px;">Vintage paper to sabhi dete h 🐥 meri taraf se ye h.</p>
+      </div>
+
+      <nav>
+        <button class="btn" data-page="mother">Mother</button>
+        <button class="btn" data-page="father">Father</button>
+        <button class="btn" data-page="sister">Sister</button>
+        <button class="btn" data-page="brother">Brother</button>
+        <button class="btn primary" data-page="you">You ❤️</button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HOME -->
+      <!-- HOME -->
+
+<section id="home" class="page active">
+  <div class="content-wrap">
+
+    <!-- Welcome Card -->
+    <div class="card">
+      <h2 style="margin-bottom:6px;">Welcome</h2>
+      <p style="color:var(--muted);">Click any button above to view a family member.</p>
+    </div>
+
+    <!-- Large Banner Image -->
+    <div class="card" style="padding:0; overflow:hidden;">
+      <div style="
+        width:100%;
+        height:1100px;
+        border-radius:14px;
+        overflow:hidden;
+      ">
+        <img src="images/family.jpg" alt="Family Photo" style="
+          width:100%;
+          height:100%;
+          object-fit:cover;
+          display:block;
+        ">
+      </div>
+    </div>
+
+    <!-- Text under Image -->
+    <div class="card" style="text-align:center;">
+      <h2 style="margin-bottom:12px;">Our Family ❤️</h2>
+      <p style="margin-top:14px;color:var(--muted);font-size:14px;">
+        
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+      
+
+      <!-- MOTHER -->
+      <section id="mother" class="page">
+        <div class="content">
+          <div class="back" data-page="home">← Back to Home</div>
+
+          <div class="photo-frame">
+            <img src="images/mumma.jpg" alt="Mother">
+          </div>
+
+          <div class="card">
+            <h2>Mother (Meri Mumma🫠) Soft Sweet Soul </h2>
+            <p><b>About:</b> "She is the first love we ever know — a gentle strength, a soft voice, and a heart that
+              never stops giving.
+              She carries the family with patience, grace, and endless love.
+              Her smile feels like home, her words feel like comfort, and her presence feels like peace."
+
+              "A mother doesn’t just raise a family — she builds a world where everyone feels safe, supported, and
+              loved."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FATHER -->
+      <section id="father" class="page">
+        <div class="content">
+          <div class="back" data-page="home">← Back to Home</div>
+
+          <div class="photo-frame">
+            <img src="images/papa.jpg" alt="Father">
+          </div>
+
+          <div class="card">
+            <h2>Father (Mere Papa) Strong Calm Heart</h2>
+            <p><b>About:</b> "He is the quiet strength behind the family — steady, wise, and always ready to guide
+              without saying much.
+              His support feels like a shield, his trust feels like courage, and his presence brings calm in every
+              storm.
+              A father doesn’t just protect his family — he teaches them how to stand strong in life."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SISTER -->
+      <section id="sister" class="page">
+        <div class="content">
+          <div class="back" data-page="home">← Back to Home</div>
+
+          <div class="photo-frame">
+            <img src="/images/sis.jpg" alt="Sister">
+          </div>
+
+          <div class="card">
+            <h2>Sister (Meri Behan) Little Happy Star</h2>
+            <p><b>About:</b>"She brings light into the home with her laughter, her stories, and her caring heart.
+              A sister understands without explaining, comforts without trying, and loves without conditions.
+              She is both a friend and family — someone who makes life softer, brighter, and more fun."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BROTHER -->
+      <section id="brother" class="page">
+        <div class="content">
+          <div class="back" data-page="home">← Back to Home</div>
+
+          <div class="photo-frame">
+            <img src="images/bro.jpg" alt="Brother">
+          </div>
+
+          <div class="card">
+            <h2>Brother (mera Bhai) Cute Crazy Partner</h2>
+            <p><b>About:</b> "He is the playful energy of the family — loyal, funny, and always ready to stand beside
+              you.
+              A brother may tease, joke, and argue, but his heart always protects and cares deeply.
+              He brings joy, support, and strength in his own unique way, making the family feel complete."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- YOU -->
+      <section id="you" class="page">
+        <div class="content">
+          <div class="back" data-page="home">← Back to Home</div>
+
+          <div class="photo-frame">
+            <img src="images/WhatsApp Image 2025-07-07 at 15.27.08_9138a691.jpg" alt="Komal">
+          </div>
+
+          <div class="card">
+            <h2>It's u — Komal (Queen of My Stars in my universe)</h2>
+            <p><b>About:</b>"You’re the one who brings peace into my life without even trying.
+              Your smile makes everything feel lighter, and your presence feels like home to me.
+              I don’t know how you do it, but you make my world better just by being in it.
+              You’re not just someone I love — you’re the most beautiful part of my life."</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>Made with ♥ for someone special</footer>
+
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll(".page");
+    const buttons = document.querySelectorAll("[data-page]");
+
+    function showPage(id) {
+      pages.forEach(p => p.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-page");
+        showPage(target);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
