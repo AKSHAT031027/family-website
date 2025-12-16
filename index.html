@@ -81,10 +81,10 @@
     }
 
     .btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 26px rgba(255, 150, 200, 0.35);
-  background: linear-gradient(90deg, #ffd6e9, #ffb3d7);
-}
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(255, 150, 200, 0.35);
+      background: linear-gradient(90deg, #ffd6e9, #ffb3d7);
+    }
 
 
     /* MAIN & PAGES */
@@ -95,15 +95,17 @@
     }
 
     .page {
-      position: absolute;
-      inset: 0;
-      overflow-y: auto;
-      padding: 20px;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(10px);
-      transition: 0.3s ease;
-    }
+        
+        position: absolute;
+        inset: 0;
+        overflow-y: auto;
+        padding: 120px 20px 20px;
+        /* important */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: 0.3s ease;
+      }
 
     .page.active {
       opacity: 1;
@@ -170,7 +172,8 @@
       <div class="logo">♥</div>
       <div>
         <h2 style="margin:0;">For You — Komal</h2>
-        <p style="margin:0; color:var(--muted); font-size:13px;">Vintage paper to sabhi dete h 🐥 meri taraf se ye h.</p>
+        <p style="margin:0; color:var(--muted); font-size:13px;">Vintage paper to sabhi dete h 🐥 meri taraf se ye h.
+        </p>
       </div>
 
       <nav>
@@ -179,6 +182,8 @@
         <button class="btn" data-page="sister">Sister</button>
         <button class="btn" data-page="brother">Brother</button>
         <button class="btn primary" data-page="you">You ❤️</button>
+        <button class="btn" data-page="me">Me😅</button>
+
       </nav>
     </header>
 
@@ -187,45 +192,45 @@
       <!-- HOME -->
       <!-- HOME -->
 
-<section id="home" class="page active">
-  <div class="content-wrap">
+      <section id="home" class="page active">
+        <div class="content-wrap">
 
-    <!-- Welcome Card -->
-    <div class="card">
-      <h2 style="margin-bottom:6px;">Welcome</h2>
-      <p style="color:var(--muted);">Click any button above to view a family member.</p>
-    </div>
+          <!-- Welcome Card -->
+          <div class="card">
+            <h2 style="margin-bottom:6px;">Welcome</h2>
+            <p style="color:var(--muted);">Click any button above to view a family member.</p>
+          </div>
 
-    <!-- Large Banner Image -->
-    <div class="card" style="padding:0; overflow:hidden;">
-      <div style="
+          <!-- Large Banner Image -->
+          <div class="card" style="padding:0; overflow:hidden;">
+            <div style="
         width:100%;
         height:1100px;
         border-radius:14px;
         overflow:hidden;
       ">
-        <img src="images/family.jpg" alt="Family Photo" style="
+              <img src="images/family.jpg" alt="Family Photo" style="
           width:100%;
           height:100%;
           object-fit:cover;
           display:block;
         ">
-      </div>
-    </div>
+            </div>
+          </div>
 
-    <!-- Text under Image -->
-    <div class="card" style="text-align:center;">
-      <h2 style="margin-bottom:12px;">Our Family ❤️</h2>
-      <p style="margin-top:14px;color:var(--muted);font-size:14px;">
-        
-      </p>
-    </div>
+          <!-- Text under Image -->
+          <div class="card" style="text-align:center;">
+            <h2 style="margin-bottom:12px;">Our Family ❤️</h2>
+            <p style="margin-top:14px;color:var(--muted);font-size:14px;">
 
-  </div>
-</section>
+            </p>
+          </div>
+
+        </div>
+      </section>
 
 
-      
+
 
       <!-- MOTHER -->
       <section id="mother" class="page">
@@ -256,6 +261,7 @@
 
           <div class="photo-frame">
             <img src="images/papa.jpg" alt="Father">
+
           </div>
 
           <div class="card">
@@ -279,7 +285,7 @@
           </div>
 
           <div class="card">
-            <h2>Sister (Meri Behan) Little Happy Star</h2>
+            <h2>Sister (Khushi) Little Happy Star</h2>
             <p><b>About:</b>"She brings light into the home with her laughter, her stories, and her caring heart.
               A sister understands without explaining, comforts without trying, and loves without conditions.
               She is both a friend and family — someone who makes life softer, brighter, and more fun."</p>
@@ -297,7 +303,7 @@
           </div>
 
           <div class="card">
-            <h2>Brother (mera Bhai) Cute Crazy Partner</h2>
+            <h2>Brother (Naman) Cute Crazy Partner</h2>
             <p><b>About:</b> "He is the playful energy of the family — loyal, funny, and always ready to stand beside
               you.
               A brother may tease, joke, and argue, but his heart always protects and cares deeply.
@@ -325,9 +331,69 @@
         </div>
       </section>
 
+      <!--Me-->
+      <!-- ME -->
+
+
     </main>
 
-    <footer>Made with ♥ for someone special</footer>
+    <footer>Made<!-- ME -->
+      <section id="me" class="page">
+        <div class="content">
+          <div class="back" data-page="home">← Back to Home</div>
+
+          <!-- TWO IMAGES TOGETHER -->
+          <div style="
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-bottom:20px;
+    ">
+            <div class="photo-frame" style="max-width:280px;height:380px;">
+              <img src="/images/meee.jpg" alt="Me Photo 1">
+            </div>
+
+            💖
+
+            <div class="photo-frame" style="max-width:280px;height:380px;">
+              <img src="/images/kkk.jpg" alt="Me Photo 2">
+            </div>
+          </div>
+
+          <!-- TEXT -->
+          <div class="card">
+            <h2>About Me — Just Me 😅</h2>
+
+            <p>
+              I’m not perfect, and I don’t try to be.
+              I’m just someone who feels deeply,
+              cares honestly, and stays loyal to the people I love.
+            </p>
+
+            <p>
+              I believe in small things — being present,
+              listening properly, and doing things from the heart.
+              I may not always have the right words,
+              but my intentions are always real.
+            </p>
+
+            <p>
+              I value family, respect, and emotional connection.
+              I work on myself every day,
+              learn from mistakes, and try to be better than yesterday.
+            </p>
+
+            <p>
+              This page exists because she asked me to make it —
+              and honestly,
+              if she asked, I’d do it without thinking twice.
+            </p>
+          </div>
+        </div>
+      </section>
+      with ♥ for someone special
+    </footer>
 
   </div>
 
